@@ -1,0 +1,19 @@
+#!/bin/env python3
+
+import pyodbc
+cnxn = pyodbc.connect('DRIVER=PostgreSQL;Database=testdb;User ID=testuser;Password=testpass;String Types=Unicode')
+
+cursor = cnxn.cursor()
+
+cursor.execute("CREATE TABLE t1 (b int)")
+
+cursor.execute("INSERT INTO t1 values (245), (876)")
+
+cursor.execute("SELECT * FROM t1") 
+row = cursor.fetchone() 
+while row:
+    print (row) 
+    row = cursor.fetchone()
+
+cnxn.commit()
+
