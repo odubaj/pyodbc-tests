@@ -1,0 +1,13 @@
+#!/bin/env python3
+
+import pyodbc
+cnxn = pyodbc.connect('DRIVER=MariaDB;Database=test;user=john;Password=password;String Types=Unicode')
+
+cursor = cnxn.cursor()
+
+cursor.execute("SELECT * FROM users")
+row = cursor.fetchone() 
+while row:
+    print (row) 
+    row = cursor.fetchone()
+exit(0)
