@@ -4,7 +4,7 @@
 #
 #   runtest.sh of /CoreOS/mariadb-connector-odbc/Sanity/mariadb-simple
 #   Description: Simple sanity test connecting to mariadb database
-#   Author: Karel Volny <kvolny@redhat.com>
+#   Author: Filip Januš <fjanus@redhat.com>
 #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #
@@ -48,22 +48,7 @@ rlJournalStart
     rlPhaseStartTest
         rlRun -s "${TestDir}/pyodbcsample " 0 "Running a trivial query using pyodbc"
         ## the output should look like
-        # +---------------------------------------+
-        # | Connected!                            |
-        # |                                       |
-        # | sql-statement                         |
-        # | help [tablename]                      |
-        # | quit                                  |
-        # |                                       |
-        # +---------------------------------------+
-        # SQL> select 123 * 456;
-        # +---------------------+
-        # | 123 * 456           |
-        # +---------------------+
-        # | 56088               |
-        # +---------------------+
-        # SQLRowCount returns 1
-        # 1 rows fetched
+        # (5, '25')
         rlAssertGrep "(5, '25')" $rlRun_LOG
         rlAssertNotGrep "ERROR" $rlRun_LOG
     rlPhaseEnd

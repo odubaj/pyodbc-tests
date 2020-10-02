@@ -2,7 +2,7 @@
 #
 #   Makefile of /CoreOS/pyodbc/Sanity/postgresql-odbc
 #   Description: Simple test for the postgresql odbc interface in python
-#   Author: Honza Horak <hhorak@redhat.com>
+#   Author: Filip Januš <fjanus@redhat.com>
 #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #
@@ -24,7 +24,6 @@
 #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#export TEST=/CoreOS/unixODBC/postgresql-simple
 export TESTVERSION=2.0
 
 BUILT_FILES=
