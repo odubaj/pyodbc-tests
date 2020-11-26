@@ -1,0 +1,21 @@
+summary: Basic smoke-test for accessing MariaDb via unixODBC
+contact:
+- Filip Janus <fjanus@redhat.com>
+component:
+- python3-pyodbc
+- unixODBC
+- mariadb-connector-odbc
+- mariadb
+test: ./runtest.sh
+framework: beakerlib
+recommend:
+- python3-pyodbc
+- unixODBC
+- unixODBC-libs
+- mariadb-connector-odbc
+- mariadb-server
+duration: 5m
+extra-summary: 'TestVersion:     2.0'
+extra-task: 'TestVersion:     2.0'
+tag: Tier1
+distro: rhel-8

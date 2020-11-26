@@ -1,0 +1,23 @@
+summary: Basic smoke-test for accessing PostgreSQL via unixODBC
+contact:
+- Honza Horak <hhorak@redhat.com>
+component:
+- python3-pyodbc
+- unixODBC
+- postgresql-odbc
+- postgresql
+test: ./runtest.sh
+framework: beakerlib
+require:
+- library(postgresql/basic)
+recommend:
+- python3-pyodbc
+- unixODBC
+- unixODBC-libs
+- postgresql-odbc
+- postgresql-server
+duration: 5m
+extra-summary: /CoreOS/unixODBC/postgresql-simple
+extra-task: /CoreOS/unixODBC/postgresql-simple
+tag: Tier1
+distro: rhel-8
