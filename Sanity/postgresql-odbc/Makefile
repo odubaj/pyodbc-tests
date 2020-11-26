@@ -57,7 +57,6 @@ $(METADATA): Makefile
 	@echo "Priority:        Normal" >> $(METADATA)
 	@echo "License:         GPLv2" >> $(METADATA)
 	@echo "Destructive:     no" >> $(METADATA)
-	@echo "RhtsRequires:    library(postgresql/basic)" >> $(METADATA)
 	@echo "Bug:             1881490" >> $(METADATA)
 
 	rhts-lint $(METADATA)
