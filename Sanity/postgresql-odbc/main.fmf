@@ -20,4 +20,6 @@ duration: 5m
 extra-summary: /CoreOS/unixODBC/postgresql-simple
 extra-task: /CoreOS/unixODBC/postgresql-simple
 tag: Tier1
-distro: rhel-8
+relevancy:
+- distro = rhel-4, rhel-5, rhel-6, rhel-7: False
+- distro = rhel-8: True
